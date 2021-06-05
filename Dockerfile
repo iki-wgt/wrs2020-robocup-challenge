@@ -23,6 +23,8 @@ RUN mkdir -p /workspace/src
 # copy our algorithm to workspace folder
 ADD . /workspace/src
 
+RUN echo "test"
+
 # install dependencies defined in package.xml
 RUN cd /workspace && /ros_entrypoint.sh rosdep install --from-paths src --ignore-src -r -y
 
